@@ -1,0 +1,171 @@
+:root {
+    /* Háttérszínek */
+    --main-bg: #0d192b;       /* Az egész oldal háttere */
+    --card-bg: #14253d;       /* Maga a kártya háttere */
+    --line: #2e405a;          /* Az elválasztó vonal színe lent */
+
+    /* Szöveg és Neon színek */
+    --soft-blue: #8bacda;     /* A leírás szövege */
+    --white: #ffffff;         /* Cím és fontos infók */
+    --cyan: #00fff7;          /* Az ár (ETH) és az ikon színe */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+    height: 100vh;
+    font-family: "Outfit",sans-serif ;
+}
+
+.card-container{
+    background-color: var(--card-bg);
+    width: 29rem;
+    border-radius: 12px;
+    box-shadow: 10px 20px 70px;
+    position: relative;
+}
+
+.card-image{
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card-image img{
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+h1{
+    color: var(--white);
+    margin-inline-start: 1.5rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+
+p{
+    margin-inline-start: 1.5rem;
+    color: var(--soft-blue);
+    max-width: 23rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: 200;
+}
+
+.card-status{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-inline-start: 1.5rem;
+    margin-inline-end: 1.5rem;
+}
+
+.eth-price{
+    color: #00fff7;
+    margin-block-end: 1.5rem;
+    font-size: 700;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.eth-price img{
+    margin-inline-end: 0.7rem;
+    vertical-align: middle;
+}
+
+.days-left{
+    color: var(--soft-blue);
+    margin-block-end: 1.5rem;
+    font-size: 700;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.days-left img{
+    margin-inline-end: 0.7rem;
+    vertical-align: middle;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--line); /* A változót használd, amit létrehoztál! */
+    margin: 1rem 1.5rem;
+}
+
+.card-author{
+    display: flex;
+    margin-inline-start: 1.5rem;
+    align-items: center;
+    padding-bottom: 1.1rem;
+}
+
+.card-author img{
+    height: 3rem;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.card-author span{
+    color: white;
+    cursor: pointer;
+}
+
+
+.card-author span:hover{
+    color: #00fff7;
+}
+
+h1:hover{
+    color: #00fff7;
+}
+
+.card-image:active{
+    color: #00fff7 transparent;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.overlay{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+
+    background-color: hsla(178, 100%, 50%, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.view-icon{
+    height: auto;
+    width: 3rem; 
+}
+
+.image-container:hover .overlay{
+    opacity: 1;
+}
