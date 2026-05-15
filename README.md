@@ -15,4 +15,4 @@ A beautiful NFT preview card component. This project was great for practicing CS
 * **Mobile-first workflow**
 
 ## 📸 Preview
-![Design Preview](./images/Képernyőkép 2026-05-15 230144.png)
+![Design Preview](./images/Képernyőkép%202026-05-15%20230144.png)
